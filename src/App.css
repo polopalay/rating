@@ -13,12 +13,14 @@
   line-height: 10px;
   font-weight: 600;
   font-size: 16px;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
 }
 .quantity-container{
   width: 120px;
 }
-.rate-btn{
+.rate-quan-btn{
+  width: 200px;}
+.rate-btn .rate-img{
   pointer-events: none;
 }
