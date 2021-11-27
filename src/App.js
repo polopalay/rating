@@ -77,9 +77,7 @@ function App() {
         title: 'Thành công!',
         text: 'Cám ơn thông tin góp ý của quý khách',
         icon: 'success',
-        //confirmButtonText: 'Điền lại'
-      })
-      //alert("Cám ơn thông tin góp ý của quý khách")
+      }).then(() => window.location.reload(false))
     }
   }
   return (
@@ -116,7 +114,7 @@ function App() {
       <div className="d-flex flex-column mt-4">
         <h5 className="text-start">
           <input type="checkbox" className="form-check-input" checked={improves.filter(item => item.chose == true).length > 0} disabled />
-          <i>Theo Quý khách, Bưu điện cần quan tâm cải tiến nội dung nào để chất lượng phục vụ của Giao dịch viên  đáp ứng được yêu cầu</i>:
+          <i> Theo Quý khách, Bưu điện cần quan tâm cải tiến nội dung nào để chất lượng phục vụ của Giao dịch viên  đáp ứng được yêu cầu</i>:
         </h5>
         <div className="d-flex justify-content-between">
           {improves.map((item =>
@@ -127,7 +125,7 @@ function App() {
       <div className="row mt-4">
         <h5 className="col-sm-12">
           <input type="checkbox" className="form-check-input" checked={other != ""} disabled />
-          <i>Ý kiến khác:</i>
+          <i> Ý kiến khác:</i>
         </h5>
         <div className="col-sm-12">
           <textarea className="form-control" onChange={event => setOther(event.target.value)}></textarea>
