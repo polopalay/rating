@@ -1,3 +1,6 @@
+button {
+  font-weight: bold !important;
+}
 .form-container{
   width: 750px;
 }
@@ -20,7 +23,8 @@
   width: 120px;
 }
 .rate-quan-btn{
-  width: 200px;}
+  width: 230px;
+}
 .rate-btn .rate-img{
   pointer-events: none;
 }
