@@ -6,6 +6,8 @@ import quantity2 from './img/quantity2.png';
 import quantity3 from './img/quantity3.png';
 import quantity4 from './img/quantity4.png';
 import quantity5 from './img/quantity5.png';
+import point from './img/point.png';
+import vnpost from './img/vnpost.png';
 
 function App() {
   const [transacions, setTransactions] = useState([
@@ -82,7 +84,13 @@ function App() {
   }
   return (
     <div className="form-container container mt-4 d-flex flex-column">
-      <h4 className="text-center text-danger">ĐÁNH GIÁ CHẤT LƯỢNG PHỤC VỤ KHÁCH HÀNG</h4>
+      <div className="d-flex justify-content-between">
+        <img src={vnpost} className="img-header border-0" />
+        <div className="text-header">
+          <h4 className="text-danger">ĐÁNH GIÁ CHẤT LƯỢNG PHỤC VỤ KHÁCH HÀNG</h4>
+        </div>
+        <img src={point} className="img-header border-0" />
+      </div>
       <div className="d-flex justify-content-between mt-4">
         <h5 className="text-start">
           <input type="checkbox" className="form-check-input" checked={transacions.filter(item => item.chose == true).length > 0} disabled />
@@ -131,14 +139,14 @@ function App() {
           <textarea className="form-control" onChange={event => setOther(event.target.value)}></textarea>
         </div>
       </div>
-      <div className="d-flex justify-content-center mt-4">
-        <button type="button" className="btn btn-primary" onClick={submit}>GỬI ĐÁNH GIÁ</button>
+      <div className="d-flex justify-content-between mt-4">
+        <button type="button" className="btn btn-primary px-5" onClick={submit}>GỬI ĐÁNH GIÁ</button>
+        <h4 className="text-danger" id="noti">XIN TRÂN TRỌNG CÁM ƠN QUÝ KHÁCH!</h4>
       </div>
       <div className="d-flex justify-content-center mt-4">
-        <h4 className="text-danger" id="noti">XIN TRÂN TRỌNG CÁM ƠN QUÝ KHÁCH!</h4>
       </div>
     </div>
   );
 }
 
-export default App;
+export default App

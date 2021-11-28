@@ -1,8 +1,16 @@
 button {
   font-weight: bold !important;
 }
+.text-header {
+  /*text-align: center;*/
+  height: 80px;
+  padding-top: 28px;
+}
+.img-header {
+  height: 75px;
+}
 .form-container{
-  width: 750px;
+  width: 1200px;
 }
 .required {
   color: red;
